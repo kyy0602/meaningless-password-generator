@@ -7,8 +7,8 @@ using namespace std;
 
 static void show_usage(string name) {
   cerr << "Usage: " << name << " {OPTION} [VALUE]" << endl
-                      << "{-h | --help}" << endl
-                      << "{-l | --length} [value]" << endl;
+                    << "{-h | --help}" << endl
+                    << "{-l | --length} [value]" << endl;
 }
 
 string random(int x) {                                                          //string randomizer
@@ -21,8 +21,10 @@ string random(int x) {                                                          
                        '%', '^', '&', '*'};
   string out;
   string randomChar;
-  out += charList[rand() % 71];
-  for(int a = 1; a <= x; a++) {                                                 //generate x characters randomly
+  if(x != 0) {
+    out += charList[rand() % 71];
+  }
+  for(int a = 1; a < x; a++) {                                                  //generate x characters randomly
     randomChar = charList[rand() % 71];
     if(randomChar == out.substr(a-1, a)) {                                      //check if the random character is the same as the previous one
       a--;
