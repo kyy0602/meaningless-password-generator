@@ -11,7 +11,7 @@ static void show_usage(string name) {
                       << "{-l | --length} [value]" << endl;
 }
 
-string random(int x) {                                                          //charactor randomizer
+string random(int x) {                                                          //string randomizer
   char charList[71] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k',
                        'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
                        'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G',
